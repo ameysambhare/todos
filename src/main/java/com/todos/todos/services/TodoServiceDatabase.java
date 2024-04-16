@@ -15,6 +15,7 @@ import java.util.Optional;
 @Service
 @Data
 public class TodoServiceDatabase implements TodoService{
+
     @Autowired
     TodoRepository todoRepository;
 
@@ -57,7 +58,6 @@ public class TodoServiceDatabase implements TodoService{
     public void delete(int id) {
         todoRepository.deleteById(id);
     }
-
     @Override
     public void update(TodoRequest request) {
         Optional<TodoTable> optionalRecord =  todoRepository.findById(Integer.parseInt(request.getId()));
