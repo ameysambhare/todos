@@ -15,7 +15,7 @@ public class AppointmentController {
     AppointmentRepository appointmentRepository;
     @GetMapping
     public String hello() {
-        return "Hello World";
+        return "Hello Appointment World";
     }
     @PostMapping
     public AppointmentRecord createAppointment(@RequestBody AppointmentRequest request){
