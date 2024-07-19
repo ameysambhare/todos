@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/patient")
 @CrossOrigin("*")
+
 public class PatientController {
     @Autowired
     PatientRepository patientRepository;
@@ -27,11 +28,16 @@ public class PatientController {
         record.setLname(request.getLname());
         record.setPatientImage(request.getPatientImage());
         record.setAddressLine1(request.getAddressLine1());
+        record.setPin(request.getPin());
         record.setEmergencyContact(request.getEmergencyContact());
         record.setGuardianFirstName(request.getGuardianFirstName());
         record.setGuardianLastName(request.getGuardianLastName());
         record.setGuardianContact(request.getGuardianContact());
         record.setGuardianCity(request.getGuardianCity());
+        record.setGuardianState(request.getGuardianState());
+        record.setGuardianPin(request.getGuardianPin());
+        record.setGuardianImage(request.getGuardianImage());
+        record.setGuardianAddress1(request.getGuardianAddress1());
         return patientRepository.save(record);
     }
 
