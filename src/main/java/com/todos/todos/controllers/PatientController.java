@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/patient")
+@CrossOrigin("*")
 public class PatientController {
     @Autowired
     PatientRepository patientRepository;
